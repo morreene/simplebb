@@ -7,7 +7,7 @@ from flask import request,flash
 
 #from flask.ext.sqlalchemy import SQLAlchemy
 from flask_sqlalchemy import SQLAlchemy
-#import sqlite3
+import sqlite3
 
 
 
@@ -20,7 +20,9 @@ db = SQLAlchemy(app)
 SECERT_KEY="a secret key"
 app.config.from_object(__name__)
 app.secret_key=app.config['SECERT_KEY']
-from models import Message
+#from application.models import Message
+from simplebb.models import Message
+
  
 @app.route('/',methods=['POST','GET'])
 def index():

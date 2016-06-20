@@ -2,7 +2,11 @@
  
 #from flask.ext.script import Manager
 from flask_script import Manager
-from application.app import app
+#from application.app import app
+
+from simplebb import app
+from simplebb import models
+
 
 manager = Manager(app)
 app.config['DEBUG'] = True
