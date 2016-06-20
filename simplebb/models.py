@@ -20,6 +20,5 @@ class Message(db.Model):
         def __repr__(self):
                 return "<User:%s>" %self.name
  
- 
 if __name__=="__main__":
         db.create_all()
